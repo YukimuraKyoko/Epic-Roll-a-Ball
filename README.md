@@ -1,11 +1,11 @@
 # Epic-Roll-a-Ball
-"Roll a ball" but with improved visuals.
 ![Alt Text](Images/Ball1.JPG)
 ![Alt Text](Images/Ball2.JPG)
 ## Details
 - **Unity Version:** 2017.4.28f1
 - **Purpose:** Demonstration of Visuals in Unity
 - **Duration of Project:** 1 week
+- **Project Description:** A roll a ball project but with improved visuals
 - **Visuals shown includes:**
   - Custom Cube/Sphere models made in blender
   - Post Processing V2
