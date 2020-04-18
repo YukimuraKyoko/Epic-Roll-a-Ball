@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{DA6A1DEE-0657-A800-CF5C-7B529C62C4DF}</ProjectGuid>
+    <ProjectGuid>{64A2585C-0FFA-D577-A80D-8CA80D6EFC67}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Unity.Postprocessing.Editor</AssemblyName>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>Assets</BaseDirectory>
@@ -51,42 +51,72 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\PostProcessing\Editor\Attributes\DecoratorAttribute.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Attributes\PostProcessEditorAttribute.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\BaseEditor.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Decorators\AttributeDecorator.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Decorators\Decorators.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Decorators\TrackballDecorator.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\EffectListEditor.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Effects\AmbientOcclusionEditor.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Effects\AutoExposureEditor.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Effects\BloomEditor.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Effects\ChromaticAberrationEditor.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Effects\ColorGradingEditor.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Effects\DefaultPostProcessEffectEditor.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Effects\DepthOfFieldEditor.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Effects\LensDistortionEditor.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Effects\ScreenSpaceReflectionsEditor.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Effects\VignetteEditor.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\PostProcessDebugEditor.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\PostProcessEffectBaseEditor.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\PostProcessEffectEditor.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\PostProcessLayerEditor.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\PostProcessProfileEditor.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\PostProcessVolumeEditor.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Tools\CubeLutAssetFactory.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Tools\CubeLutAssetImporter.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Tools\DefineSetter.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Tools\ProfileFactory.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Tools\ResourceAssetFactory.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Tools\VolumeFactory.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Utils\CurveEditor.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Utils\EditorUtilities.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Utils\GlobalSettings.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Utils\PostProcessShaderIncludePath.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Utils\SerializedParameterOverride.cs" />
-     <Compile Include="Assets\PostProcessing\Editor\Utils\Styling.cs" />
-     <None Include="Assets\PostProcessing\Editor\Unity.Postprocessing.Editor.asmdef" />
+     <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\FinalPass.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Debug\Waveform.compute" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\Uber.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\Texture3DLerp.compute" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\CopyStd.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\Bloom.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\CopyStdFromDoubleWide.shader" />
+     <None Include="Assets\PostProcessing\Shaders\xRLib.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\API\Switch.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVOUpsample.compute" />
+     <None Include="Assets\PostProcessing\Shaders\API\PSSL.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Debug\Vectorscope.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\GaussianDownsample.compute" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\ScreenSpaceReflections.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\DepthOfField.shader" />
+     <None Include="Assets\FirstShader.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\DiscardAlpha.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\Lut3DBaker.compute" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\Dithering.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Colors.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\API\Vulkan.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\GrainBaker.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\ExposureHistogram.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Debug\LightMeter.shader" />
+     <None Include="Assets\PostProcessing\Shaders\API\D3D12.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\API\OpenGL.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\DiskKernels.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVODownsample2.compute" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\ScalableAO.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\ACES.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVODownsample1.compute" />
+     <None Include="Assets\PostProcessing\Shaders\StdLib.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVO.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\DepthOfField.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\FastApproximateAntialiasing.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\Fog.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVORender.compute" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\ScalableAO.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\SubpixelMorphologicalAntialiasing.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\MotionBlur.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\SubpixelMorphologicalAntialiasing.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\Texture2DLerp.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\DeferredFog.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\CopyStdFromTexArray.shader" />
+     <None Include="Assets\PostProcessing\Shaders\API\D3D9.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\Lut2DBaker.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\AutoExposure.compute" />
+     <None Include="Assets\PostProcessing\Shaders\Debug\Overlays.shader" />
+     <None Include="Assets\PostProcessing\Shaders\API\Metal.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\Distortion.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Debug\Vectorscope.compute" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\TemporalAntialiasing.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\SubpixelMorphologicalAntialiasingBridge.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\ScreenSpaceReflections.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\Copy.shader" />
+     <None Include="Assets\PostProcessing\Shaders\API\D3D11.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Debug\Waveform.shader" />
+     <None Include="Assets\PostProcessing\Shaders\API\XboxOne.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Sampling.hlsl" />
+     <None Include="Assets\3DShader.shader" />
+     <None Include="Assets\PostProcessing\Shaders\API\PSP2.hlsl" />
+     <None Include="Assets\PostProcessing\Shaders\Debug\Histogram.compute" />
+     <None Include="Assets\PostProcessing\Shaders\Debug\Histogram.shader" />
+     <None Include="Assets\PostProcessing\Shaders\Builtins\ExposureHistogram.compute" />
  <Reference Include="UnityEngine.CoreModule">
  <HintPath>D:/Unity 2017.4.28f1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
  </Reference>
@@ -228,12 +258,6 @@
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity 2017.4.28f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>D:/Unity 2017.4.28f1/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.TestRunner">
- <HintPath>D:/Unity 2017.4.28f1/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.TestRunner">
  <HintPath>D:/Unity 2017.4.28f1/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
@@ -243,74 +267,34 @@
  <Reference Include="UnityEngine.Timeline">
  <HintPath>D:/Unity 2017.4.28f1/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.Timeline">
- <HintPath>D:/Unity 2017.4.28f1/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.TreeEditor">
- <HintPath>D:/Unity 2017.4.28f1/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UIAutomation">
  <HintPath>D:/Unity 2017.4.28f1/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UIAutomation">
- <HintPath>D:/Unity 2017.4.28f1/Editor/Data/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>D:/Unity 2017.4.28f1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.Networking">
- <HintPath>D:/Unity 2017.4.28f1/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.GoogleAudioSpatializer">
- <HintPath>D:/Unity 2017.4.28f1/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.GoogleAudioSpatializer">
  <HintPath>D:/Unity 2017.4.28f1/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.HoloLens">
- <HintPath>D:/Unity 2017.4.28f1/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>D:/Unity 2017.4.28f1/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.SpatialTracking">
- <HintPath>D:/Unity 2017.4.28f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>D:/Unity 2017.4.28f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.VR">
- <HintPath>D:/Unity 2017.4.28f1/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.Graphs">
- <HintPath>D:/Unity 2017.4.28f1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.Android.Extensions">
- <HintPath>D:/Unity 2017.4.28f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.WindowsStandalone.Extensions">
- <HintPath>D:/Unity 2017.4.28f1/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.Advertisements">
- <HintPath>C:/Users/Tina Nguyen/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>C:/Users/Tina Nguyen/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.Analytics">
- <HintPath>C:/Users/Tina Nguyen/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/Editor/UnityEditor.Analytics.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.Purchasing">
  <HintPath>C:/Users/Tina Nguyen/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.Purchasing">
- <HintPath>C:/Users/Tina Nguyen/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/Editor/UnityEditor.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>C:/Users/Tina Nguyen/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.Postprocessing.Editor.csproj">
+      <Project>{DA6A1DEE-0657-A800-CF5C-7B529C62C4DF}</Project>      <Name>Unity.Postprocessing.Editor</Name>    </ProjectReference>
     <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
       <Project>{931A5BC3-2472-BE1C-09B7-D79B0DF36094}</Project>      <Name>Unity.Postprocessing.Runtime</Name>    </ProjectReference>
   </ItemGroup>
